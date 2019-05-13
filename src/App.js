@@ -15,6 +15,10 @@ class App extends Component {
     return (
       <>
         <h1>BMI Converter</h1>
+        <select id="method">
+          <option value="metric">Metric</option>
+          <option value="imperial">Imperial</option>
+        </select>
 
         <div>
           <label>Weight(kg)</label>
