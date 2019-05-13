@@ -20,15 +20,30 @@ class App extends Component {
           <option value="imperial">Imperial</option>
         </select>
 
+        <div id="metric_inputs">
+          <div>
+            <label>Weight(kg)</label>
+            <input name="weight" value={this.state.weight} onChange={ (e) => this.setState({ weight: e.target.value })} />
+          </div>
+
+          <div>
+            <label>Height</label>
+            <input name="height" value={this.state.height} onChange={ (e) => this.setState({ height: e.target.value })} />
+          </div>
+       </div>
+
+
+       <div id="imperial_inputs">
         <div>
-          <label>Weight(kg)</label>
-          <input name="weight" value={this.state.weight} onChange={ (e) => this.setState({ weight: e.target.value })} />
+          <label>Weight(lbs)</label>
+          <input name="weight-in-lbs" value={this.state.weight} onChange={ (e) => this.setState({ weight: e.target.value })} />
         </div>
 
         <div>
-          <label>Height</label>
-          <input name="height" value={this.state.height} onChange={ (e) => this.setState({ height: e.target.value })}/>
+          <label>Height(in)</label>
+          <input name="weight-in-in" value={this.state.height} onChange={ (e) => this.setState({ height: e.target.value })} />
         </div>
+      </div>
 
         <DisplayResult
           weight={this.state.weight}

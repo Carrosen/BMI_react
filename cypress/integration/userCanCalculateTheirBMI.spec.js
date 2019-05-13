@@ -20,27 +20,29 @@ describe('BMI Converter', () => {
       cy.get('input[name="height"]').type('186')
     })
 
-    it('displays assesment', async () => {
+    it('displays assesment', () => {
       cy.contains('You are Overweight')
     })
 
-    it('displays BMI value', async () => {
+    it('displays BMI value', () => {
       cy.contains('BMI of 27.46')
     })
   })
 
-  describe('Imperial method', async () => {
+  describe('Imperial method', () => {
     beforeEach( async () => {
       cy.get('select[id="method"]').select('imperial')
-      cy.get('input[name="weight"]').type('200')
-      cy.get('input[name="height"]').type('73')
+      cy.get('input[name="weight-in-lbs"]').type('200')
+      cy.get('input[name="height-in-in"]').type('73')
     })
 
-    it('displays assesment', async () => {
+    // added in lbs and in in in the above
+
+    it('displays assesment', () => {
       cy.contains('You are Overweight')
     })
 
-    it('displays BMI value', async () => {
+    it('displays BMI value', () => {
       cy.contains('BMI of 26.38')
     })
   })

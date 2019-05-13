@@ -7,6 +7,14 @@ export const bmiCalculation = (weight, height, method) => {
   height = isNaN(height) ? 0 : height;
 
   bmi = weight / (height / 100 * height / 100);
+  // a function for imperial method
+//   let weightFormat = method === 'metric' ? 'weight-in-kgs' : 'weight-in-lbs'
+// let heightFormat = method === 'metric' ? 'height-in-cm' : 'height-in-in'
+// let w = parseFloat(document.getElementById(weightFormat).value);
+// let h = parseFloat(document.getElementById(heightFormat).value);
+
+// method === 'metric' ? person.calculate_bmi() : person.calculate_imperial_bmi();
+// resolve(person);
 
   let finalBMI = parseFloat(bmi.toFixed(2));
   let BMIMessage = setBMIMessage(finalBMI)
@@ -34,3 +42,6 @@ const setBMIMessage = (finalBMI) => {
     return "Obese";
   }
 }
+
+//           cy.get('.awesome-selector')
+//             .click()
