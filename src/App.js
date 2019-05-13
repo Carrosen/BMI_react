@@ -16,6 +16,7 @@ class App extends Component {
       <>
         <h1>BMI Converter</h1>
         <select id="method">
+        {/*  connect option to div through id's?? when on click on an option show that*/}
           <option value="metric">Metric</option>
           <option value="imperial">Imperial</option>
         </select>
@@ -41,7 +42,7 @@ class App extends Component {
 
         <div>
           <label>Height(in)</label>
-          <input name="weight-in-in" value={this.state.height} onChange={ (e) => this.setState({ height: e.target.value })} />
+          <input name="height-in-in" value={this.state.height} onChange={ (e) => this.setState({ height: e.target.value })} />
         </div>
       </div>
 

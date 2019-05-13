@@ -30,7 +30,7 @@ describe('BMI Converter', () => {
   })
 
   describe('Imperial method', () => {
-    beforeEach( async () => {
+    beforeEach(() => {
       cy.get('select[id="method"]').select('imperial')
       cy.get('input[name="weight-in-lbs"]').type('200')
       cy.get('input[name="height-in-in"]').type('73')
