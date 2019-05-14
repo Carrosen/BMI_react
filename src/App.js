@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DisplayResult from './Components/displayResult'
 import './App.css';
+import { Container, Grid, Header } from 'semantic-ui-react'
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +16,19 @@ class App extends Component {
   render() {
     return (
       <>
-        <h1>BMI Converter</h1>
+      <Container>
+        <Grid centered columns={3}>
+          <Grid.Column>
+            <Header
+            as="h1"
+            textAlign="center"
+            >
+              BMI Converter
+            </Header>
+          </Grid.Column>
+        </Grid>
+      </Container>
+
         <select id="method" value={this.state.method} onChange={ (e) => this.setState({ method: e.target.value })} >
           <option value="metric">Metric</option>
           <option value="imperial">Imperial</option>
