@@ -8,19 +8,9 @@ export const bmiCalculation = (weight, height, method) => {
 
 if (method == 'metric') {
   bmi = weight / (height / 100 * height / 100);
-} else {
+} if (method == 'imperial') {
   bmi = weight / (height * height) * 703;
 }
-//   imperial_bmi = weight / (height * height) * 703;
-//        a function for imperial method
-//   let method = method === 'metric' ? 'weight-in-kgs' : 'weight-in-lbs'
-//   let method = method === 'metric' ? 'height-in-cm' : 'height-in-in'
-//   let w = parseFloat(document.getElementById(weightFormat).value);
-//   let h = parseFloat(document.getElementById(heightFormat).value);
-
-//   method === 'metric' ? bmi() : imperial_bmi();
-
-
 
 
   let finalBMI = parseFloat(bmi.toFixed(2));
@@ -52,3 +42,13 @@ const setBMIMessage = (finalBMI) => {
 
 //           cy.get('.awesome-selector')
 //             .click()
+
+//   imperial_bmi = weight / (height * height) * 703;
+//        a function for imperial method
+//   let method = method === 'metric' ? 'weight-in-kgs' : 'weight-in-lbs'
+//   let method = method === 'metric' ? 'height-in-cm' : 'height-in-in'
+//   let w = parseFloat(document.getElementById(weightFormat).value);
+//   let h = parseFloat(document.getElementById(heightFormat).value);
+
+//   method === 'metric' ? bmi() : imperial_bmi();
+
