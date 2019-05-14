@@ -51,4 +51,3 @@ const setBMIMessage = (finalBMI) => {
 //   let h = parseFloat(document.getElementById(heightFormat).value);
 
 //   method === 'metric' ? bmi() : imperial_bmi();
-
