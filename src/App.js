@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DisplayResult from './Components/displayResult'
 import './App.css';
-import { Container, Grid, Header } from 'semantic-ui-react'
+import { Container, Grid } from 'semantic-ui-react'
 
 class App extends Component {
   constructor(props) {
@@ -19,12 +19,7 @@ class App extends Component {
       <Container>
         <Grid centered columns={3}>
           <Grid.Column>
-            <Header
-            as="h1"
-            textAlign="center"
-            >
-              BMI Converter
-            </Header>
+              <h1>BMI Converter</h1>
           </Grid.Column>
         </Grid>
       </Container>
